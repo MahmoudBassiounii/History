@@ -1,0 +1,274 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    width: 1262px;
+    background-color: rgba(196, 196, 196, 0.801);
+}
+#loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 106vh;
+    background:rgb(21, 21, 24) url('../pic/20.gif') no-repeat;
+    background-position: center;
+    z-index: 99999999;
+   
+  }
+
+  /* Start Edit in header */
+/* Start Edite In NavBar */
+header{
+    margin-bottom: 35px;
+}
+.navbar-brand {
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+    transition: all 2s linear;
+  }
+  .navbar-brand:hover {
+    transform: translate(-20px, 0);
+  }
+  
+  /* End Edit in header */
+/* End Edite In NavBar */
+
+
+/* Start Craet Map */
+#esri-continer
+{
+    width : 800px;
+    height: 600px;
+     position: absolute;
+     left: 10px;
+
+  
+}
+
+#popup{
+   
+    width: 400px;
+    height: 600px;
+    background-color: rgb(185, 185, 185);
+    position: absolute;
+    left: 857px;
+    transform-style: preserve-3d;
+ 
+
+}
+.hahah{
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 9999;
+    opacity: 1;
+
+}
+#but{
+    color: black;
+    font-family: tahoma;
+    font-weight: bold;
+    position: absolute;
+    top:280px;
+    left: 150px;
+    font-size: 40px;
+    padding: 10px;
+    background-color: red;
+    transform: translate(-1.5,1.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#select-aswan,
+#select-luxor,
+#select-asna,
+#select-sohag,
+.but
+{
+    opacity: 0;
+    
+   
+    transition: all 2s ;
+}
+#select-aswan.active,
+.but.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+#select-luxor.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+#select-asna.active
+
+{
+    opacity: 1;
+    z-index: 1;
+}
+#select-sohag.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+#select,
+#select-aswan,
+#select-luxor,
+#select-asna,
+#select-sohag
+{
+    width: 288px;
+    height: 30px;
+    direction: rtl;
+    position: absolute;
+    left: 105px;
+    background-color: rgb(0, 83, 138);
+    transition: all 2s;
+    margin: 5px 0px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+button
+{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(76, 133, 180);
+    transition: all 1s;
+    margin: 5px 0px;
+    position: absolute;
+    right:298px;
+}
+button:hover{
+    background-color: rgb(9, 104, 0);
+}
+button:active{
+    background-color: rgb(255, 11, 11);
+}
+#select-aswan,
+#select-luxor,
+#select-asna,
+#select-sohag
+{
+    position: absolute;
+    top: 40px;
+}
+.but
+{
+    position: absolute;
+    top: 40px;
+    right:298px;
+}
+.child{
+    position: absolute;
+    top: 63px;
+    right: 10px;
+    text-align: right;
+    transition: all 2s ;
+    
+}
+.child.animation{
+    animation: image 2s ease-in   forwards;
+}
+.child img{
+width: 380px;
+height: 130px;
+border-radius: 10px;
+line-height: 10px;
+
+}
+.child h1{
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(208, 255, 0);
+    font-size: ;
+}
+.child h5{
+    color: rgb(190, 40, 153);
+    font-size: 15px; 
+    font-weight: bold;
+    line-height: 15px;
+}
+.child span{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 15px;
+}
+.child p{
+    color: rgb(70, 0, 41);
+    font-size: 9px;
+}
+.child
+{
+    opacity: 0;
+}
+.child.active
+{
+    opacity: 1;
+    z-index: 1;
+}
+ 
+@media (max-width: 768px) {
+    #esri-continer {
+      width: 480px;
+    }
+    #popup{
+       
+         position: absolute;
+         left:10px;
+         top:620px;
+         width : 470px;
+         height: 600px;
+    
+    }
+    button
+    {
+        width: 100px;
+        height: 30px;
+        background-color: rgb(76, 133, 180);
+        transition: all 1s;
+        margin: 5px 0px;
+        position: absolute;
+        right:370px;
+    }
+    .but
+    {
+        position: absolute;
+        top: 40px;
+        right:370px;
+    }
+    #select,
+#select-aswan,
+#select-luxor,
+#select-asna,
+#select-sohag,
+button{
+    margin-left: 40px;
+}
+
+}
+@keyframes image{
+    0%{
+        transform: scale(.1,.1);
+    }
+    50%{
+        transform: scale(.5,.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}

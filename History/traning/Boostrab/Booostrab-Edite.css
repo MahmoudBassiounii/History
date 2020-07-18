@@ -1,0 +1,38 @@
+/*Start Edit IN NavBar*/
+.navbar {
+    direction: rtl;
+   
+    margin: 0px;
+    padding: 2px;
+    z-index: 9999;
+  }
+  
+  .nav-item {
+    height: 30px;
+    line-height: 10px;
+    font-size: 15px;
+  
+  }
+  .navbar-nav .dropdown-menu{
+    background-color: rgb(41, 40, 40);
+    width:270px;
+    overflow: hidden;
+    
+  }
+  .dropdown-item {
+    text-align: right;
+    margin: 5px; 
+    transition: all 1s;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .dropdown-menu a:hover{
+    background-color: rgb(231, 91, 91);
+  padding-right: 40px;}
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.137);
+  }
+  
+  /* End Edite In NavBar */

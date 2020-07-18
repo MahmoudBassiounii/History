@@ -1,0 +1,131 @@
+/* Start Edit In Footr */
+footer {
+    position: absolute;
+    bottom: 120px;
+    min-height: 400px;
+    background-image: url("../pic/jonatan-pie-h8nxGssjQXs-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 1262px;
+   
+  }
+  
+  footer .connect-us {
+    float: inline-end;
+  }
+ 
+  footer h1{
+      color: rgba(255, 255, 255, 0.63);
+  }
+  footer .text {
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 600px;
+    text-align: right;
+    margin-bottom: 5px;
+    color: white;
+  }
+  footer .email {
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 600px;
+    text-align: right;
+    border-radius: none;
+    margin-bottom: 5px;
+    color: white;
+  }
+  footer .textarea {
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 600px;
+    height: 150px;
+    text-align: right;
+    margin-bottom: 5px;
+    line-height: 10px;
+    color: white;
+    margin: 0 auto;
+  }
+ 
+  @media (max-width: 768px) {
+    footer,
+    .copy-right{
+        width: 500px;
+       
+        margin-top: 500px;
+    }
+    footer .text {
+      background-color: rgba(0, 0, 0, 0.76);
+      width: 400px;
+      text-align: right;
+      margin-bottom: 5px;
+      color: white;
+    }
+    footer .email {
+      background-color: rgba(0, 0, 0, 0.76);
+      width: 400px;
+  
+      text-align: right;
+      border-radius: none;
+      margin-bottom: 5px;
+      color: white;
+    }
+    footer .textarea {
+      background-color: rgba(0, 0, 0, 0.76);
+      width: 400px;
+      height: 150px;
+  
+      text-align: right;
+      margin-bottom: 5px;
+      line-height: 10px;
+      color: white;
+      margin: 0 auto;
+    }
+    footer{
+      min-height: 700px;
+  
+    }
+  }
+  footer {
+    position: absolute;
+    top: 700px;}
+
+  /* End Edit In Footr */
+  /* Start Creat CopyRight */
+  .copy-right{
+    padding: 5px;
+    position: relative;
+    background-color: rgb(55, 55, 177);
+    width: 100%;
+    color: white;
+    font-size: large;
+    position: absolute;
+    top: 1100px;
+  }
+  /* End Creat CopyRight */
+  #esri-continer{
+    animation-name: translate;
+    animation-duration: 2s;
+    animation-delay: 8s;
+    
+    
+}
+@keyframes translate{
+    from{
+        transform: translate(-1000px)
+    }
+    to{
+        transform:  translate(0px)
+}
+}
+#popup{
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-delay: 8s;
+  
+}
+@keyframes popup{
+  from{
+      transform: translate(1500px)
+  }
+  to{
+      transform:  translate(0px)
+}
+}

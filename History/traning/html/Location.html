@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>جنوبنا تاريخنا /  مواقع التاريخ المصرية</title>
+
+    <link rel="shortcut icon" href="../pic/Eye_of_Horus_bw.svg">
+    <!-- Boostrab Phone Link -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+     <!-- Boostrab Style Link -->
+        <link rel="stylesheet" href="../boostrab/bootstrapsr.css">
+        <!-- My Boostrab to Edite on Boostrab -->
+        <link rel="stylesheet" href="../boostrab/Booostrab-Edite.css">
+        <!-- Esri API  -->
+     <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
+    
+          <!-- My Main Css -->
+        <link rel="stylesheet" href="../css/History.css" />
+         <!-- MY Style themes  -->
+         <link rel="stylesheet" href="../css/Themes--.css">  
+          <!-- MY Style themes  -->
+          <link rel="stylesheet" href="../css/design.css">  
+  </head>
+  <body>
+    <div id ="loader"></div> 
+    <header>
+      <!-- Start Creat NavBar -->
+      <div class="container">
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top  ">
+          <a class="navbar-brand" href="#">جنوبنا <span class="brand-span">تاريخنا</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="F:\lerning\cours gis devloper\api\traning\html\Location.html\">الصفحة الرئيسة  <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="#connect-us">للتواصل معانا</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+     </div>
+    </header>
+
+    <!-- start creat boostrab container -->
+    
+    <div class="container ">
+
+    <!--This is api esri continer-->
+    
+    <div id="esri-continer" class="col"></div>
+    <!--This is popup continer-->
+    <div id="popup" class="col text-center">
+    
+       <div class=" hahah" id="counter">
+        <span class="spanS" id="but">
+          start
+        </span>
+      </div> 
+      <!--Start Creat from--> 
+      <form action="">
+        <!--Start Creat Select Main box -->
+        <select id="select">
+          <option class="n"> قم بالاختيار</option>
+          <option class="n">اسوان</option>
+          <option class="n">الاقصر</option>
+          <option class="n">سوهاج</option>
+          <option class="n">اسنا</option>
+        </select>
+         <!--Start Creat Asswan select box -->
+        <select name="معابد محافظة اسوان" id="select-aswan" class="">
+          <optgroup>
+            <option class="n"> قم بالاختيار</option>
+            <option class="n">السد العالى</option>
+            <option class="n">معبد ابو سمبل</option>
+            <option class="n">معبد فيلة</option>
+            <option class="n">المسلة الناقصة</option>
+            <option class="n"> معبد كوم امبو</option>
+          </optgroup>
+        </select>
+        <!--Start Creat luxor select box -->
+        <select name="معابد محافظة الاقصر" id="select-luxor" class="">
+          <optgroup>
+            <option class="n"> قم بالاختيار</option>
+            <option class="n" >معبد الدير البحرى</option>
+            <option class="n">معبد الكرنك</option>
+          </optgroup>
+        </select>
+        <!--Start Creat Asna select box -->
+        <select name="معابد محافظة  اسنا" id="select-asna" class="">
+          <optgroup>
+            <option class="n" > قم بالاختيار</option>
+            <option class="n"> معبد اسنا</option>
+          </optgroup>
+          </select>
+           <!--Start Creat sohag select box -->
+          <select name="معابد محافظة  سوهاج" id="select-sohag" class="">
+            <optgroup>
+              <option class="n"> قم بالاختيار</option>
+              <option class="n">  منطقة ابيدوس</option>
+            </optgroup>
+        </select>
+        <!--Start Creat Msin Button-->
+        <button type="button" onclick="myFunction()">أختار</button>
+           <!--Start Creat second Button-->
+        <button class="but" type="button" onclick="myFunction()">أختار</button>
+      </form>
+      <!--Start creat Continer information about source-->
+      <div class="contineer-combo">
+        <!--Start creat first Child [0]-->
+        <div class="child">
+          <h1>السد العالى</h1>
+          <img
+            src="../pic/السد العالى.jpg"
+            alt="السد العالى"
+            title="السد العالى"
+          />
+          <h5><span> الاسم :</span> السد العالى</h5>
+          <h5><span> الموقع :</span> اسوان</h5>
+          <h5><span>بداية الانشاء :</span> 1960</h5>
+          <h5><span>نهاية الانشاء :</span> 1968</h5>
+          <h5>1971<span> : تم الافتاح </span></h5>
+          <h5>
+            <span>الهدف من الانشاء :</span>إنتاج الكهرباء وتنظيم الري وتخزين
+            المياه ومنع فيضان النيل
+          </h5>
+          <h5>بعض المعلومات عن السد العالى</h5>
+          <p>
+            سد أسوان العالي أو السدّ العالي هو سد مائي على نهر النيل في جنوب
+            مصر، أنشئ في عهد جمال عبد الناصر وقد ساعد السوفييت في بنائه. وقد
+            ساعد السد كثيراً في التحكم على تدفق المياه والتخفيف من آثار فيضان
+            النيل. يستخدم لتوليد الكهرباء في مصر. طول السد 3600 متر، عرض القاعدة
+            980 متر، عرض القمة 40 مترا، والارتفاع 111 متر. حجم جسم السد 43 مليون
+            متر مكعب من إسمنت وحديد ومواد أخرى، ويمكن أن يمر خلال السد تدفق مائي
+            يصل إلى 11,000 متر مكعب من الماء في الثانية الواحدة. بدأ بناء السد
+            في عام 1960 وقد قدرت التكلفة الإجمالية بمليار دولار شطب ثلثها من قبل
+            الاتحاد السوفييتي. عمل في بناء السد 400 خبير سوفييتي وأكمل بناؤه في
+            1968. ثبّت آخر 12 مولد كهربائي في 1970 وافتتح السد رسمياً في عام
+            1971. ولكن أدى السد العالي إلى تقليل خصوبة نهر النيل وعدم تعويض
+            المصبات في دمياط ورأس البر بالطمي مما يهدد بغرق الدلتا بعد نحو أكثر
+            من مائة عام وبسبب بعض العوامل الأخرى مثل الاحتباس الحراري وذوبان
+            الجليد بالقطبين الشمالي والجنوبي بتأثير سلبي من طبقة الأوزون. وتجدر
+            الإشارة هنا إلى أن أول من أشار إلى بناء هذا السد هو العالم العربي
+            المسلم الحسن بن الحسن بن الهيثم -(ولد عام 965م وتوفى عام 1029م).
+            والذي لم تتح له الفرصة لتنفيذ فكرته وذلك بسبب عدم توفر الآلات
+            اللازمة لبناءه في عهده.
+          </p>
+        </div>
+        <!--Start creat second Child [1]-->
+        <div class="child">
+          <h1>معبد الدير البحرى</h1>
+          <img
+            src="../pic/معبد الدير البحرى.jpg"
+            alt="معبد الدير البحرى"
+            title="معبد الدير البحرى"
+          />
+          <h5><span> الاسم :</span>معبد الدير البحرى</h5>
+          <h5><span> الموقع :</span> الاقصر</h5>
+          <h5><span>المدرج الاول  :</span> معبد منتوحتب الثاني</h5>
+          <h5><span>المدرج الثانى</span>  معبد تحتمس الثالث</h5>
+          <h5><span>المدرج الثالث </span> معبد حتشبسوت</h5>
+          <h5>بعض المعلومات عن معبد الدير البحرى</h5>
+          <p>
+              الدير البحري هو مجموعة من المعابد والمقابر الفرعونية الموجودة في الضفة الغربية من النيل المقابلة لمدينة الأقصر بمصر
+              شيدت الدير الملكة حتشبسوت لتؤدي فيه الطقوس التي تفيدها في العالم الآخر أما اسم الدير البحري فهو اسم عربي حديث أطلق على هذه المنطقة في القرن السابع الميلادي بعد أن استخدم الأقباط هذا المعبد ديرًا لهم. ويتكون المعبد من ثلاثة مدرجات متصاعدة يوصل بينهم منصات منحدرة للصعود والنزول.
+          </p>
+        </div>
+
+        <!--Start creat three Child [2]-->
+        <div class="child">
+          <h1>معبد الكرنك</h1>
+          <img
+            src="../pic/معبد الكرنك.jpg"
+            alt="معبد الكرنك"
+            title="معبد الكرنك"
+          />
+          <h5><span> الاسم :</span>معبد الكرنك</h5>
+          <h5><span> الموقع :</span> الاقصر</h5>
+          <h5><span>البانى  :</span> سنوسرت الاول </h5>
+          <h5>بعض المعلومات عن معبد الكرنك</h5>
+          <p>
+            الكرنك أو مجمع معابد الكرنك الذي يُشتهر باسم معبد الكرنك هو مجموعة من المعابد والبنايات والأعمدة، حيث استمرت عمليات التوسع والبناء منذ العصر الفرعونى وتحديدا ملوك الدولة الوسطي حتى العصر الرومانى في الأقصر في مصر على الشط الشرقى. المعبد بُنى للثالوث الإلهى أمون (أمون رع في العصر الحديث)، زوجته الالهة موت وابنهم الاله خونسو؛ ولكل منهم معبد تابع لمجمع معابد الكرنك. أحياناً يعنى السياح والغير متخصصين بمعبد الكرنك فقط المعبد تابع لأمون آى أمون رع.
+          </p>
+        </div>
+          <!--Start creat three Child [3]-->
+          <div class="child">
+            <h1>معبد ابو سمبل</h1>
+            <img
+              src="../pic/معبد ابو سمبل.jpg"
+              alt="معبد ابو سمبل"
+              title=" معبد ابو سمبل"
+            />
+            <h5><span> الاسم :</span>معبد ابو سمبل</h5>
+            <h5><span> الموقع :</span> اسوان</h5>
+            <h5><span>البانى  :</span>  رمسيس الثانى </h5>
+            <h5>بعض المعلومات عن معبد ابو سمبل</h5>
+            <p>
+              أبو سمبل هو موقع أثري يقع على الضفة الغربية لبحيرة ناصر نحو 290 كم جنوب غرب أسوان. وهو أحد مواقع "آثار النوبة" المدرجة ضمن قائمة اليونسكو لمواقع التراث العالمي. والتي تبدأ من اتجاه جريان النهر من أبو سمبل إلى فيلة (بالقرب من اسوان).
+
+              المعابد المزدوجة كانت أصلا منحوتة من الجبال في عهد الملك رمسيس الثاني في القرن الثالث عشر قبل الميلاد، كنصب دائم له وللملكة نفرتاري، للاحتفال بذكرى انتصاره في معركة قادش. ومع ذلك، ففي 1960 تم نقل مجمع المنشآت كليا لمكان آخر، على تلة اصطناعية مصنوعة من هيكل القبة، وفوق خزان السد العالي في أسوان.
+              
+              وكان من الضروري نقل المعابد لتجنب تعرضها للغرق خلال إنشاء بحيرة ناصر، وتشكل خزان المياه الاصطناعي الضخم بعد بناء السد العالي في أسوان على نهر النيل. ولا زالت أبو سمبل واحدة من أفضل المناطق لجذب السياحة في مصر.   </p>
+          </div>
+            <!--Start creat three Child [4]-->
+            <div class="child">
+              <h1>معبد فيلة</h1>
+              <img
+                src="../pic/معبد فيلة.jpg"
+                alt="معبد فيلة"
+                title=" معبد فيلة"
+              />
+              <h5><span> الاسم :</span>معبد فيلة</h5>
+              <h5><span> الموقع :</span> اسوان</h5>
+              <h5><span> اسم ثانى  :</span>  انس الوجود </h5>
+              <h5>بعض المعلومات عن معبد فيلة</h5>
+              <p>
+                جزيرة فيلة، هي جزيرة في منتصف نهر النيل وهي إحدى الحصون الأقوى على طول حدود مصر الجنوبية، وتفصل النيل إلى قناتين معاكستين في أسوان، كان بها معبد فيلة وانتقل من مكانه الأصلي على جزيرة فيلة وتم تجميعه على جزيرة أجيليكا، وذلك في أعقاب بناء السد العالي.
+
+            ويرجع اسم فيلة أو فيلاي إلى اللغة الإغريقية التي تعني (الحبيبة) أو (الحبيبات) أما الاسم العربي لها فهو أنس الوجود نسبة لأسطورة أنس الموجودة في قصص ألف ليلة وليلة أما الاسم المصري القديم والقبطي فهو بيلاك أو بيلاخ ويعني الحد أو النهاية لأنها كانت آخر حدود مصر في الجنوب. ومجموعة العبادة كرست لعبادة الإلهة إيزيس غير أن الجزيرة احتوت على معابد لحتحور وأمنحتب وغيرها من المعابد.
+
+              </p>
+            </div>
+              <!--Start creat three Child [5]-->
+              <div class="child">
+                <h1>المسلة الناقصة </h1>
+                <img
+                  src="../pic/المسلة الناقصة.jpg"
+                  alt="المسلة الناقصة "
+                  title="المسلة الناقصة"
+                />
+                <h5><span> الاسم :</span> المسلة الناقصة</h5>
+                <h5><span> الموقع :</span> اسوان</h5>
+                <h5><span> ارتفاع المسلة   :</span>  41.7 متر  </h5>
+                <h5>بعض المعلومات عن  المسلة الناقصة</h5>
+                <p>
+                  المسلة الناقصة (بالإنجليزية: unfinished Obelisk)‏ هي مسلة من الجرانيت الوردي في أسوان بمصر. وهي توجد في الجزء الشمالي لمحجر هناك، يقع بالقرب من أسوان على الشاطيء الشرقي للنيل ويبعد نحو 1 كيلومتر شرق نهر النيل. كانت ارتفاع المسلة سيصل إلى نحو 7و41 متر، ويبلغ ضلع مقطعها عند قاعدتها 2و4 متر في 2و4 متر، ويصل وزنها عند اكتمالها نحو 1168 طن
+  
+                </p>
+              </div>
+              <!--Start creat three Child [6]-->
+              <div class="child">
+                <h1> معبد كوم امبو </h1>
+                <img
+                  src="../pic/معبد كوم امبو.jpg"
+                  alt="معبد كوم امبو"
+                  title=" معبد كوم امبو"
+                />
+                <h5><span> الاسم :</span> معبد كوم امبو</h5>
+                <h5><span> الموقع :</span> اسوان</h5>
+                <h5><span> البانى  :</span> بطليموس السادس</h5>
+                <h5><span>  زخرفتة   :</span> فى عصر الرومانى فى عهد تيبريوس  </h5>
+                <h5>بعض المعلومات عن   معبد كوم امبو</h5>
+                <p>
+                  معبد كوم أمبو يقع بمدينة كوم أمبو بمحافظة أسوان جنوب مصر.أنشئ المعبد في عهد بطليموس السادس لعبادة الألهة سوبيك وحورس. وقد جرت مؤخرا عمليات ترميم وتجديد لمنطقة المعبد.
+                </p>
+              </div>
+              <!--Start creat three Child [7]-->
+              <div class="child">
+                <h1> منطقة ابيدوس</h1>
+                <img
+                  src="../pic/منطقة ابيدوس.jpg"
+                  alt="  منطقة ابيدوس"
+                  title=" مطقة ابيدوس"
+                />
+                <h5><span> الاسم :</span> منطقة ابيدوس  </h5>
+                <h5><span> الموقع :</span> سوهاج</h5>
+             
+                <h5>بعض المعلومات عن منطقة ابيدوس </h5>
+                <p>
+                  أبيدوس (بالهيروغليفية: "أب-ب-دجو") مدينة بغرب البلينا سوهاج وقد كانت أحد المدن القديمة بمصر العليا. يجمع معظم علماء الآثار على أنها عاصمة مصر الأولى في نهاية عصر ما قبل الأسر والأسر الأربع الأولى، ويرجع تاريخها الي 5 آلاف سنة. وتقع بين أسيوط والأقصر بالقرب من قنا. وكانت مدينة مقدسة أطلق عليها الأغريق تنيس. وحاليا يطلق عليها العرابة المدفونة بـ (البلينا) وتبعد عن النيل نحو 11 كيلومتر . ويوجد بها معبد سيتي الأول ومعبد رمسيس الثاني وهما يتميزان بالنقوش المصرية القديمة البارزة. وهذه المدينة كانت المركز الرئيسي لعبادة الإله أوزوريس. وكان يحج إليها قدماء المصريين ليبكوا الإله أوزوريس حارس الحياة الأبدية وإله الغرب. واكتشف فيها أقدم القوارب في التاريخ في المقابر القديمة إلى الغرب من معبد سيتي الأول والد رمسيس الثاني، مؤسس الأسرة مصرية تاسعة عشر والتي اشتهرت بتسمية الكثير من ملوكها حتى رمسيس 11 نسبة إلى اسم مؤسس الأسرة.
+
+                  تمتاز هذه القرية بكثره الآثار حيث كان الاسم السابق لها العرابه المدفونه بسبب أن كانت جميع الآثار بها تحت الرمال . ومنذ عصر ليس ببعيد أعيد اكتشاف جزء كبير منها، ولا يزال هناك الكثير تحت الأبحاث والدراسة.
+                  
+                  من المدهش عندما تكون داخل المعبد يأخذك إلي الماضي البعيد حيث الحياة القديمة وعظمة الأجداد لتقف تتأمل هذه العظمة وسرعان ما يأخذك الوقت سريعا".                </p>
+              </div>
+
+                 <!--Start creat three Child [8]-->
+                 <div class="child">
+                  <h1> معبد اسنا</h1>
+                  <img
+                    src="../pic/معبد اسنا.jpg"
+                    alt="معبد   اسنا"
+                    title=" معبد اسنا"
+                  />
+                  <h5><span> الاسم :</span> معبد اسنا </h5>
+                  <h5><span> الموقع :</span> اسنا</h5>
+               
+                  <h5>بعض المعلومات عن معبد اسنا </h5>
+                  <p>
+                    معبد إسنا من أهم معالم السياحة في قنا, وهو المعبد الوحيد المتبقي من ضمن 4 معابد بمدينة إسنا بقنا, تم إكتشاف المعبد عام 1843م, ولكن يقال ان العالم شامبليون قام بزيارة المعبد عام 1828م ورأى نقوش بأسم الملك تحتمس.
+
+                  </p>
+                </div>
+      </div> 
+       <!--END creat Continer information about source-->
+      
+    </div>
+    <!--End creat popup continer-->
+  </div>
+  <footer>
+    <div class="container col ">
+      
+   <div class="connect-us text-center" id="connect-us">
+     <h1 class="text-center"> تواصل معانا</h1>
+     <form>
+       <input type="text" class="form-control-lg text" placeholder=" اكتب اسمك"><br>
+       <input type="email" class="form-control-lg email"  placeholder="اكتب ايميلك"><br>
+       <input type="text-area" class="form-control textarea text-area" placeholder="اكتب نص الرسالة المراد ارسالة">
+       <input class="btn btn-danger btn-block" type="submit" value="Submit">
+     </form>
+   </div >
+
+    </div>
+    
+  </footer>
+  <div class="copy-right text-center">
+   All Rights Reserved &copy; 2020 Year
+ </div>
+  <!-- <End Creat Footer -->
+  </body>
+   <!-- Font Awesome link -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+     <!-- Boostrab JQuery link -->
+     <script src="../js/jquery-3.5.1.min.js"></script>
+     <!-- Boostrab java scribt -->
+     <script src="../js/bootstrap.min.js"></script>
+     <!-- nicescroll link link -->
+     <script src="../js/jquery.nicescroll.min.js"></script>
+      <!-- My JQuery Link -->
+      <script src="../js/Location-JQuery.js"></script>
+       <!-- esri api java scribt link -->
+       <script src="https://js.arcgis.com/4.15/"></script>
+       <!-- My Java Scribt Link -->
+      <script src="../js/Location.js"></script>
+      <script src="../js/SomeJs.js"></script>
+</html>
